@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marica Schools — Love, Peace and Harmony · Hyderabad</title>
+<meta name="description" content="Marica Schools, Hyderabad. CBSE affiliated since 1991. Founded by Marie Christine de Rochemonteix on the belief that every child carries a touch of genius.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── TOKENS ─── */
+:root {
+  --navy:  #0D1F3C;
+  --red:   #C8001E;
+  --gold:  #B8933A;
+  --white: #FFFFFF;
+  --paper: #FAFAF8;
+  --ink:   #1C2B3A;
+  --mid:   #4A5568;
+  --rule:  #D8D8D4;
+  --lt:    #EDEDEA;
+  --fserif: Georgia, 'Times New Roman', serif;
+  --fsans:  'Inter', -apple-system, sans-serif;
+  --max:   1120px;
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: var(--fsans); color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; padding-bottom: 80px; overflow-x: hidden; max-width: 100vw; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+iframe, video, svg { max-width: 100%; }
+
+/* ─── LAYOUT ─── */
+.w    { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+.w-sm { max-width: 720px; margin: 0 auto; padding: 0 40px; }
+
+/* ─── TYPE ─── */
+.eyebrow {
+  font-family: var(--fsans);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--red);
+}
+.eyebrow.gold { color: var(--gold); }
+.eyebrow.mid  { color: var(--mid); opacity: .8; }
+
+h1, .t-display {
+  font-family: var(--fserif);
+  font-size: clamp(52px, 7vw, 104px);
+  font-weight: 400; line-height: .98;
+  letter-spacing: -.03em; color: var(--navy);
+}
+h1 em, .t-display em { font-style: italic; }
+
+h2, .t-h2 {
+  font-family: var(--fserif);
+  font-size: clamp(30px, 3.8vw, 54px);
+  font-weight: 400; line-height: 1.08;
+  letter-spacing: -.02em; color: var(--navy);
+}
+h2 em, .t-h2 em { font-style: italic; }
+
+h3, .t-h3 {
+  font-family: var(--fserif);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400; color: var(--navy); line-height: 1.2;
+}
+
+h4, .t-h4 {
+  font-family: var(--fserif);
+  font-size: 19px; font-weight: 700;
+  color: var(--navy); line-height: 1.3;
+}
+
+.body-lg { font-size: 18px; line-height: 1.8; color: var(--mid); }
+.body    { font-size: 16px; line-height: 1.8; color: var(--mid); }
+.body-sm { font-size: 14px; line-height: 1.75; color: var(--mid); }
+
+/* Caption always on top */
+.cap {
+  font-family: var(--fsans);
+  font-size: 10.5px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--navy); display: block; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cap::before { content: ''; display: block; width: 18px; height: 1.5px; background: var(--red); flex-shrink: 0; }
+
+/* ─── RULES ─── */
+.hr       { height: 1px; background: var(--rule); }
+.hr-heavy { height: 2px; background: var(--navy); }
+.red-rule { width: 48px; height: 3px; background: var(--red); }
+
+/* ─── BUTTONS ─── */
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--fsans); font-size: 13px; font-weight: 600; letter-spacing: .04em; cursor: pointer; transition: all .2s; border: none; }
+.btn-navy { background: var(--navy); color: var(--white); padding: 13px 28px; }
+.btn-navy:hover { background: #162d56; transform: translateY(-1px); }
+.btn-red { background: var(--red); color: var(--white); padding: 13px 28px; }
+.btn-red:hover { background: #a80018; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); padding: 12px 26px; }
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.45); padding: 12px 26px; }
+.btn-outline-white:hover { border-color: white; background: rgba(255,255,255,.1); }
+.btn-text { background: none; color: var(--red); padding: 0; font-weight: 600; font-size: 13px; border-bottom: 1px solid transparent; letter-spacing: .04em; }
+.btn-text:hover { border-bottom-color: var(--red); }
+
+/* ─── SPACING UTILS ─── */
+.mt-8  { margin-top: 8px; }  .mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; } .mt-20 { margin-top: 20px; }
+.mt-24 { margin-top: 24px; } .mt-32 { margin-top: 32px; }
+.mt-40 { margin-top: 40px; } .mt-48 { margin-top: 48px; }
+.mt-56 { margin-top: 56px; } .mt-64 { margin-top: 64px; }
+.mb-8  { margin-bottom: 8px; }  .mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; } .mb-20 { margin-bottom: 20px; }
+.mb-24 { margin-bottom: 24px; } .mb-32 { margin-bottom: 32px; }
+.mb-40 { margin-bottom: 40px; } .mb-48 { margin-bottom: 48px; }
+
+/* ─── NAV ─── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.nav-logo { display: flex; align-items: center; gap: 14px; }
+.nav-logo-mark {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.nav-logo-name { font-family: var(--fserif); font-size: 17px; font-weight: 700; color: var(--navy); letter-spacing: .02em; }
+.nav-logo-sub  { font-family: var(--fsans); font-size: 9.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-top: 1px; }
+.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+.nav-links a { font-family: var(--fsans); font-size: 13px; font-weight: 500; color: var(--mid); transition: color .2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-links .nav-disc { font-size: 12px; color: var(--mid); opacity: .7; }
+.nav-links .nav-disc:hover { opacity: 1; color: var(--navy); }
+.nav-links .nav-apply { background: var(--red); color: var(--white); padding: 9px 20px; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; transition: background .2s; }
+.nav-links .nav-apply:hover { background: #a80018; color: var(--white); }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 80px 40px 72px;
+  border-bottom: 1px solid var(--rule);
+  position: relative; overflow: hidden;
+}
+.hero-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 420px; gap: 80px;
+  align-items: end;
+}
+.hero-kicker { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.hero-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+.hero-headline { margin-bottom: 32px; }
+.hero-standfirst {
+  font-family: var(--fserif); font-size: 21px; font-style: italic;
+  line-height: 1.6; color: var(--mid); max-width: 500px;
+  border-left: 3px solid var(--red); padding-left: 20px;
+  margin-bottom: 36px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+/* Photo with caption in hero */
+.hero-photo-wrap {}
+.hero-photo {
+  width: 100%; aspect-ratio: 4/5;
+  background: #C8D0DC; overflow: hidden;
+  position: relative;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-photo-note {
+  font-family: var(--fsans); font-size: 11px; color: var(--mid);
+  margin-top: 10px; font-style: italic;
+}
+
+/* TRUST STRIP */
+.trust-strip {
+  border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: repeat(5, 1fr);
+}
+.trust-item {
+  padding: 22px 20px; text-align: center;
+  border-right: 1px solid var(--rule);
+}
+.trust-item:last-child { border-right: none; }
+.ti-num { font-family: var(--fserif); font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; }
+.ti-label { font-family: var(--fsans); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--mid); margin-top: 4px; }
+
+/* ─── PHILOSOPHY STRIP ─── */
+.phil-strip {
+  background: var(--navy); padding: 56px 40px;
+}
+.phil-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center;
+}
+.phil-label { font-family: var(--fsans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
+.phil-quote {
+  font-family: var(--fserif); font-size: clamp(20px, 2.5vw, 30px);
+  font-style: italic; color: var(--white); line-height: 1.5;
+}
+.phil-source { font-family: var(--fsans); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 20px; }
+.phil-values { display: flex; flex-direction: column; gap: 16px; }
+.phil-val { display: flex; gap: 16px; align-items: flex-start; }
+.phil-val-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 6px; }
+.phil-val-text { font-family: var(--fsans); font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.72); }
+.phil-val-text strong { color: var(--white); font-weight: 600; }
+
+/* ─── MARIE CHRISTINE ─── */
+.founder-section { padding: 100px 40px; border-bottom: 3px solid var(--navy); }
+.founder-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start;
+}
+.founder-photo-col {}
+.founder-photo {
+  width: 100%;
+  overflow: hidden;
+  filter: grayscale(8%);
+}
+.founder-photo img { width: 100%; display: block; }
+.founder-photo-caption {
+  margin-top: 14px;
+  font-family: var(--fserif); font-style: italic;
+  font-size: 14px; color: var(--mid); line-height: 1.6;
+}
+.founder-languages {
+  margin-top: 24px; padding: 20px 24px;
+  background: var(--paper); border: 1px solid var(--rule);
+}
+.founder-lang-head { font-family: var(--fsans); font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+.founder-lang-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.lang-chip {
+  font-family: var(--fsans); font-size: 11px; font-weight: 600;
+  letter-spacing: .06em; padding: 4px 10px;
+  background: var(--white); border: 1px solid var(--rule); color: var(--mid);
+}
+
+.founder-text-col {}
+.founder-pull {
+  font-family: var(--fserif); font-size: clamp(28px, 3.5vw, 48px);
+  font-style: italic; line-height: 1.1; color: var(--navy);
+  margin-bottom: 36px; letter-spacing: -.02em;
+}
+.founder-body { font-family: var(--fsans); font-size: 16.5px; line-height: 1.85; color: var(--mid); }
+.founder-body p { margin-bottom: 20px; }
+.founder-body p:last-child { margin-bottom: 0; }
+.founder-body strong { color: var(--navy); font-weight: 600; }
+.founder-blockquote {
+  font-family: var(--fserif); font-size: 20px; font-style: italic;
+  color: var(--navy); line-height: 1.55;
+  border-left: 3px solid var(--red); padding-left: 24px;
+  margin: 32px 0;
+}
+.founder-methods {
+  margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.method-card {
+  padding: 18px 20px; background: var(--paper);
+  border: 1px solid var(--rule); transition: background .2s;
+}
+.method-card:hover { background: var(--white); }
+.method-icon { font-size: 20px; margin-bottom: 8px; }
+.method-h { font-family: var(--fserif); font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.method-p { font-family: var(--fsans); font-size: 13px; line-height: 1.6; color: var(--mid); }
+
+/* ─── VIDEO ─── */
+.video-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.video-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.video-frame { position: relative; aspect-ratio: 16/9; background: var(--navy); overflow: hidden; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+/* ─── PHOTO GRID ─── */
+.photo-section { padding: 88px 40px; }
+.photo-editorial {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 260px 240px;
+  gap: 14px;
+}
+.pe-1 { grid-column: 1/3; grid-row: 1/2; }
+.pe-2 { grid-column: 3/4; grid-row: 1/2; }
+.pe-3 { grid-column: 4/5; grid-row: 1/2; }
+.pe-4 { grid-column: 1/2; grid-row: 2/3; }
+.pe-5 { grid-column: 2/4; grid-row: 2/3; }
+.pe-6 { grid-column: 4/5; grid-row: 2/3; }
+.photo-box {
+  background: #C8D0DC; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  color: #8A9AB0; font-family: var(--fsans); font-size: 12px;
+  font-weight: 500; text-align: center; padding: 12px;
+  position: relative;
+}
+.photo-box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo-box.dark { background: #1a3154; color: rgba(255,255,255,.25); }
+
+/* ─── YOUR CHILD'S YEAR ─── */
+.year-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.year-inner { max-width: var(--max); margin: 0 auto; }
+.year-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.year-month {
+  padding: 28px 24px; border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule); transition: background .2s;
+}
+.year-month:nth-child(3n) { border-right: none; }
+.year-month:nth-last-child(-n+3) { border-bottom: none; }
+.year-month:hover { background: var(--white); }
+.ym-month { font-family: var(--fsans); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.ym-title { font-family: var(--fserif); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+.ym-body { font-family: var(--fsans); font-size: 13.5px; line-height: 1.7; color: var(--mid); }
+.ym-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.ym-tag { font-family: var(--fsans); font-size: 10.5px; font-weight: 600; letter-spacing: .06em; background: var(--lt); padding: 3px 9px; color: var(--mid); }
+
+/* YEAR PILLARS */
+.year-pillars { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--rule); border-top: none; background: var(--navy); }
+.yp-item { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,.1); }
+.yp-item:last-child { border-right: none; }
+.yp-icon { font-size: 24px; margin-bottom: 12px; }
+.yp-h { font-family: var(--fserif); font-size: 16px; color: var(--white); margin-bottom: 6px; }
+.yp-p { font-family: var(--fsans); font-size: 13px; line-height: 1.65; color: rgba(255,255,255,.6); }
+
+/* ─── BEYOND THE TEXTBOOK ─── */
+.prog-section { padding: 88px 40px; }
+.prog-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.prog-card { padding: 36px 30px; border-right: 1px solid var(--rule); transition: background .2s; }
+.prog-card:nth-child(3n) { border-right: none; }
+.prog-card:nth-child(n+4) { border-top: 1px solid var(--rule); }
+.prog-card:hover { background: var(--paper); }
+.pc-n { font-family: var(--fserif); font-size: 52px; font-weight: 700; color: var(--lt); line-height: 1; margin-bottom: 16px; }
+.pc-h { font-family: var(--fserif); font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.pc-p { font-family: var(--fsans); font-size: 14px; line-height: 1.75; color: var(--mid); }
+.pc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+.pc-tag { font-family: var(--fsans); font-size: 10.5px; font-weight: 600; letter-spacing: .07em; border: 1px solid var(--rule); padding: 3px 10px; color: var(--mid); }
+
+/* ─── CAN DO ATTITUDE ─── */
+.cando-section { padding: 88px 40px; background: var(--navy); }
+.cando-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.cando-achievements { display: flex; flex-direction: column; gap: 0; margin-top: 36px; border: 1px solid rgba(255,255,255,.1); }
+.ca-item { display: flex; gap: 20px; padding: 22px 24px; border-bottom: 1px solid rgba(255,255,255,.08); align-items: flex-start; transition: background .2s; }
+.ca-item:last-child { border-bottom: none; }
+.ca-item:hover { background: rgba(255,255,255,.04); }
+.ca-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.ca-text h4 { font-family: var(--fserif); font-size: 16px; color: var(--white); margin-bottom: 5px; }
+.ca-text p { font-family: var(--fsans); font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,.62); }
+.ca-text .result { font-family: var(--fsans); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-top: 6px; }
+
+.cando-right { padding-top: 8px; }
+.cando-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.1); margin-top: 36px; }
+.cando-stat { background: var(--navy); padding: 24px; }
+.cs-num { font-family: var(--fserif); font-size: 40px; font-weight: 700; color: var(--white); line-height: 1; }
+.cs-num span { color: var(--gold); }
+.cs-label { font-family: var(--fsans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 6px; }
+.cando-photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+
+/* ─── ADVISORS ─── */
+.advisors-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.advisors-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 52px; }
+.advisor-card { border: 1px solid var(--rule); padding: 28px; background: var(--white); transition: all .2s; }
+.advisor-card:hover { box-shadow: 0 4px 20px rgba(13,31,60,.08); transform: translateY(-2px); }
+.advisor-photo { width: 64px; height: 64px; border-radius: 50%; background: var(--lt); display: flex; align-items: center; justify-content: center; color: var(--mid); font-size: 20px; margin-bottom: 16px; }
+.advisor-name { font-family: var(--fserif); font-size: 17px; color: var(--navy); margin-bottom: 4px; }
+.advisor-role { font-family: var(--fsans); font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.advisor-bio { font-family: var(--fsans); font-size: 13px; line-height: 1.65; color: var(--mid); }
+
+/* ─── TESTIMONIALS ─── */
+.testi-section { padding: 88px 40px; }
+.testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.testi-card { padding: 40px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background .2s; }
+.testi-card:hover { background: var(--paper); }
+.testi-card:nth-child(even) { border-right: none; }
+.testi-card:nth-last-child(-n+2) { border-bottom: none; }
+.testi-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 16px; }
+.testi-q { font-family: var(--fserif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--ink); margin-bottom: 20px; }
+.testi-q::before { content: '\201C'; }
+.testi-q::after  { content: '\201D'; }
+.testi-name { font-family: var(--fsans); font-size: 13px; font-weight: 600; color: var(--navy); }
+.testi-role { font-family: var(--fsans); font-size: 12px; color: var(--mid); margin-top: 3px; }
+.testi-featured { background: var(--navy); grid-column: 1/3; border-bottom: 1px solid rgba(255,255,255,.1); border-right: none; }
+.testi-featured:hover { background: var(--navy); }
+.testi-featured .testi-q { color: rgba(255,255,255,.88); font-size: 22px; }
+.testi-featured .testi-name { color: var(--white); }
+.testi-featured .testi-role { color: rgba(255,255,255,.45); }
+
+/* ─── ALUMNI ─── */
+.alumni-section { padding: 88px 40px; background: var(--navy); }
+.alumni-inner { max-width: var(--max); margin: 0 auto; }
+.alumni-top { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; margin-bottom: 56px; }
+.alumni-stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid rgba(255,255,255,.1); }
+.as-item { padding: 24px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,.1); }
+.as-item:last-child { border-right: none; }
+.as-num { font-family: var(--fserif); font-size: 38px; font-weight: 700; color: var(--white); line-height: 1; }
+.as-num span { color: var(--gold); }
+.as-label { font-family: var(--fsans); font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 6px; }
+.alumni-outcomes { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+.ao-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); padding: 24px; }
+.ao-icon { font-size: 28px; margin-bottom: 12px; }
+.ao-h { font-family: var(--fserif); font-size: 17px; color: var(--white); margin-bottom: 8px; }
+.ao-p { font-family: var(--fsans); font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,.6); }
+.ao-result { font-family: var(--fsans); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-top: 10px; }
+
+/* ─── HOW ADMISSIONS WORKS ─── */
+.admissions-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); }
+.steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.step-card { padding: 32px 28px; border-right: 1px solid var(--rule); transition: background .2s; }
+.step-card:last-child { border-right: none; }
+.step-card:hover { background: var(--white); }
+.step-n { font-family: var(--fserif); font-size: 60px; font-weight: 700; color: var(--lt); line-height: 1; margin-bottom: 16px; }
+.step-h { font-family: var(--fserif); font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+.step-p { font-family: var(--fsans); font-size: 14px; line-height: 1.7; color: var(--mid); }
+
+/* ─── FAQ ─── */
+.faq-section { padding: 88px 40px; border-top: 1px solid var(--rule); }
+.faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.faq-col { border-right: 1px solid var(--rule); }
+.faq-col:last-child { border-right: none; }
+.faq-col-head { padding: 18px 28px; font-family: var(--fsans); font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--white); background: var(--navy); }
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { padding: 18px 28px; font-family: var(--fsans); font-size: 14px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background .15s; line-height: 1.45; }
+.faq-q:hover { background: var(--paper); }
+.faq-icon { color: var(--red); font-size: 20px; flex-shrink: 0; transition: transform .2s; }
+.faq-a { padding: 0 28px 18px; font-family: var(--fsans); font-size: 14px; line-height: 1.75; color: var(--mid); display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-item.open .faq-q { background: var(--paper); color: var(--red); }
+
+/* ─── CAMPUSES ─── */
+.campuses-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.campus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 52px; }
+.campus-card { border: 1px solid var(--rule); background: var(--white); }
+.campus-body { padding: 32px; }
+.campus-name { font-family: var(--fserif); font-size: 26px; color: var(--navy); margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+.campus-row { display: flex; gap: 12px; font-family: var(--fsans); font-size: 14px; color: var(--mid); padding: 11px 0; border-bottom: 1px solid var(--lt); align-items: flex-start; line-height: 1.5; }
+.campus-row:last-of-type { border-bottom: none; }
+.campus-row-icon { flex-shrink: 0; width: 20px; }
+.campus-map { height: 200px; background: #D0D6DF; display: flex; align-items: center; justify-content: center; font-family: var(--fsans); font-size: 12px; color: #8A9AB0; border-top: 1px solid var(--rule); }
+.campus-actions { margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ─── ENQUIRY ─── */
+.enquiry-section { padding: 88px 40px; background: var(--navy); }
+.enquiry-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 480px; gap: 80px; align-items: start; }
+.eq-text h2 { font-family: var(--fserif); font-size: clamp(32px,4.5vw,64px); color: var(--white); line-height: 1.05; margin-bottom: 20px; font-weight: 400; }
+.eq-text h2 em { font-style: italic; color: var(--gold); }
+.eq-text p { font-family: var(--fsans); font-size: 17px; line-height: 1.8; color: rgba(255,255,255,.65); margin-bottom: 36px; }
+.eq-contact { display: flex; flex-direction: column; gap: 12px; }
+.eq-contact-item { display: flex; gap: 12px; font-family: var(--fsans); font-size: 14px; color: rgba(255,255,255,.65); align-items: center; }
+.eq-contact-item a { color: var(--gold); font-weight: 600; }
+.eq-form { background: var(--white); padding: 36px; }
+.eq-form-head { font-family: var(--fserif); font-size: 22px; color: var(--navy); margin-bottom: 6px; }
+.eq-form-sub { font-family: var(--fsans); font-size: 13px; color: var(--mid); margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+.ff { display: flex; flex-direction: column; gap: 5px; margin-bottom: 13px; }
+.ff label { font-family: var(--fsans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+.ff input, .ff select, .ff textarea { font-family: var(--fsans); font-size: 14px; color: var(--ink); background: var(--white); border: 1px solid var(--rule); padding: 11px 14px; outline: none; transition: border-color .2s; appearance: none; }
+.ff input:focus, .ff select:focus, .ff textarea:focus { border-color: var(--navy); }
+.ff textarea { resize: vertical; min-height: 70px; }
+.ff-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-privacy { font-family: var(--fsans); font-size: 11.5px; color: var(--mid); text-align: center; margin-top: 12px; }
+
+/* ─── FOOTER ─── */
+.footer { background: #080f1e; padding: 36px 40px; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer p { font-family: var(--fsans); font-size: 12px; color: rgba(255,255,255,.3); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-family: var(--fsans); font-size: 12px; color: rgba(255,255,255,.4); transition: color .2s; }
+.footer-links a:hover { color: rgba(255,255,255,.8); }
+
+/* ─── STICKY ─── */
+.sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--white); border-top: 2px solid var(--navy); padding: 13px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 -4px 20px rgba(0,0,0,.1); }
+.sticky-text p { font-family: var(--fserif); font-size: 15px; font-weight: 700; color: var(--navy); }
+.sticky-text span { font-family: var(--fsans); font-size: 12px; color: var(--mid); }
+.sticky-btns { display: flex; gap: 10px; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width:960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .phil-inner { grid-template-columns: 1fr; }
+  .founder-inner { grid-template-columns: 1fr; }
+  .founder-photo { max-width: 380px; }
+  .video-inner { grid-template-columns: 1fr; }
+  .photo-editorial { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+  .pe-1,.pe-2,.pe-3,.pe-4,.pe-5,.pe-6 { grid-column:auto; grid-row:auto; }
+  .year-grid { grid-template-columns: 1fr 1fr; }
+  .year-month:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .year-month:nth-child(even) { border-right: none; }
+  .prog-grid { grid-template-columns: 1fr 1fr; }
+  .prog-card:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .prog-card:nth-child(even) { border-right: none; }
+  .cando-inner { grid-template-columns: 1fr; }
+  .advisors-grid { grid-template-columns: 1fr 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .testi-card { border-right: none; }
+  .testi-featured { grid-column: auto; }
+  .alumni-top { grid-template-columns: 1fr; }
+  .alumni-outcomes { grid-template-columns: 1fr 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .step-card:nth-child(even) { border-right: none; }
+  .faq-cols { grid-template-columns: 1fr; }
+  .faq-col { border-right: none; border-bottom: 1px solid var(--rule); }
+  .campus-grid { grid-template-columns: 1fr; }
+  .enquiry-inner { grid-template-columns: 1fr; }
+  .trust-strip { grid-template-columns: repeat(3,1fr); }
+  .year-pillars { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width:640px) {
+  .w, .w-sm { padding: 0 20px; }
+  h1, .t-display { font-size: 44px; }
+  .nav-inner { padding: 0 20px; }
+  .nav-links a:not(.nav-apply) { display: none; }
+  .hero { padding: 56px 20px 0; }
+  .hero-inner { gap: 40px; }
+  .phil-strip, .founder-section, .video-section, .photo-section, .year-section,
+  .prog-section, .cando-section, .advisors-section, .testi-section,
+  .alumni-section, .admissions-section, .faq-section, .campuses-section,
+  .enquiry-section { padding-left: 20px; padding-right: 20px; }
+  .photo-editorial { grid-template-columns: 1fr; }
+  .prog-grid { grid-template-columns: 1fr; }
+  .prog-card { border-right: none !important; border-top: none; border-bottom: 1px solid var(--rule); }
+  .prog-card:last-child { border-bottom: none; }
+  .year-grid { grid-template-columns: 1fr; }
+  .year-month { border-right: none !important; }
+  .year-pillars { grid-template-columns: 1fr; }
+  .yp-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .yp-item:last-child { border-bottom: none; }
+  .advisors-grid { grid-template-columns: 1fr; }
+  .alumni-outcomes { grid-template-columns: 1fr; }
+  .alumni-stats-row { grid-template-columns: 1fr 1fr; }
+  .as-item:nth-child(even) { border-right: none; }
+  .trust-strip { grid-template-columns: 1fr 1fr; }
+  .trust-item:nth-child(even) { border-right: none; }
+  .cando-stat-row { grid-template-columns: 1fr 1fr; }
+  .cando-photo-row { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .step-card { border-right: none !important; border-bottom: 1px solid var(--rule); }
+  .step-card:last-child { border-bottom: none; }
+  .campus-row { flex-wrap: wrap; }
+  .eq-form { padding: 24px; }
+  .founder-photo { max-width: 100%; }
+  .sticky-bar { padding: 12px 16px; gap: 10px; }
+  .sticky-text span { display: none; }
+  .sticky-text p { font-size: 13px; }
+  .sticky-btns .btn { font-size: 12px; padding: 9px 14px; }
+  .ff-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 26 26" fill="none" width="20" height="20">
+          <path d="M13 3C13 3 18 7 18 13C18 16 16 19 13 21C10 19 8 16 8 13C8 7 13 3 13 3Z" fill="#C8001E"/>
+          <circle cx="13" cy="10" r="2" fill="white"/>
+          <path d="M13 12L13 19" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="nav-logo-name">Marica Schools</div>
+        <div class="nav-logo-sub">Hyderabad · Est. 1991</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#academics">Academics</a></li>
+      <li><a href="#year">School Year</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" class="nav-disc">Mandatory Disclosure</a></li>
+      <li><a href="#enquiry" class="nav-apply">Admissions</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">
+        <span class="eyebrow">Marica Schools · Hyderabad · Est. 1991</span>
+      </div>
+      <div class="hero-headline">
+        <h1>Every child<br>carries a touch<br>of <em>genius.</em><br>We find it.</h1>
+      </div>
+      <p class="hero-standfirst">
+        A school in Hyderabad founded on a single conviction that has not changed in 35 years: children should be guided, not forced — so that their particular genius may be discovered.
+      </p>
+      <div class="hero-actions">
+        <a href="#founder" class="btn btn-navy">Our Story</a>
+        <a href="#enquiry" class="btn btn-outline">Admissions 2025–26</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <span class="cap">Marica Schools · Tolichowki Campus · Hyderabad</span>
+      <div class="hero-photo">
+        [Main campus photograph]
+      </div>
+      <div class="hero-photo-note">CBSE Affiliation No. 3630059 · Nizam Colony, Tolichowki · Hyderabad 500008</div>
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip" style="max-width:var(--max);margin:56px auto 0">
+    <div class="trust-item"><div class="ti-num">1991</div><div class="ti-label">Founded</div></div>
+    <div class="trust-item"><div class="ti-num">CBSE</div><div class="ti-label">Affiliated · No. 3630059</div></div>
+    <div class="trust-item"><div class="ti-num">25</div><div class="ti-label">Students per class</div></div>
+    <div class="trust-item"><div class="ti-num">3k+</div><div class="ti-label">Alumni worldwide</div></div>
+    <div class="trust-item"><div class="ti-num">2</div><div class="ti-label">Campuses</div></div>
+  </div>
+</div>
+
+
+<!-- ══ PHILOSOPHY STRIP ══ -->
+<div class="phil-strip">
+  <div class="phil-inner">
+    <div>
+      <div class="phil-label">Our Philosophy</div>
+      <div class="phil-quote">"Children should be guided rather than forced towards the goals in their minds, in an easy and pleasing manner, so that we may be able to discover the particular touch of genius in each one of them."</div>
+      <div class="phil-source">Marica Schools · Founded 1991</div>
+    </div>
+    <div class="phil-values">
+      <div class="phil-val"><div class="phil-val-dot"></div><div class="phil-val-text"><strong>Guided, not forced.</strong> We believe pressure produces performance but destroys curiosity. We choose curiosity.</div></div>
+      <div class="phil-val"><div class="phil-val-dot"></div><div class="phil-val-text"><strong>Every child has a right to education.</strong> Not access to education — a right. The Marica Foundation exists to make this real for children whose families cannot afford fees.</div></div>
+      <div class="phil-val"><div class="phil-val-dot"></div><div class="phil-val-text"><strong>Small is not a compromise.</strong> With 25 students per class, every teacher knows every child. Not by name on a register — by character, by strength, by what makes them light up.</div></div>
+      <div class="phil-val"><div class="phil-val-dot"></div><div class="phil-val-text"><strong>Integration matters.</strong> Our differently-abled students learn alongside their peers. Several are now software engineers, government employees, and teachers. The school that includes everyone produces people who include everyone.</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ MARIE CHRISTINE ══ -->
+<div class="founder-section" id="founder">
+  <div class="founder-inner">
+
+    <div class="founder-photo-col">
+      <span class="cap">Marie Christine de Rochemonteix · Founder · 1991–2021</span>
+      <div class="founder-photo">
+        <img src="marie-christine.jpg" alt="Marie Christine de Rochemonteix, Founder of Marica Schools" />
+      </div>
+      <div class="founder-photo-caption">
+        Marie Christine de Rochemonteix built Marica Schools from the ground up in Tolichowki, Hyderabad — a school that became the centre of hundreds of families' lives.
+      </div>
+
+      <div class="founder-languages">
+        <div class="founder-lang-head">Honours & Recognition</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="font-size:22px;flex-shrink:0;line-height:1">🎖️</div>
+            <div>
+              <div style="font-family:var(--fserif);font-size:15px;font-weight:700;color:var(--navy);line-height:1.35">Ordre National du Mérite</div>
+              <div style="font-family:var(--fsans);font-size:12.5px;color:var(--mid);margin-top:3px;line-height:1.5">Conferred by the Republic of France in recognition of distinguished service</div>
+            </div>
+          </div>
+          <div style="height:1px;background:var(--rule)"></div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <div style="font-size:22px;flex-shrink:0;line-height:1">🕊️</div>
+            <div>
+              <div style="font-family:var(--fserif);font-size:15px;font-weight:700;color:var(--navy);line-height:1.35">Mother Teresa Award</div>
+              <div style="font-family:var(--fsans);font-size:12.5px;color:var(--mid);margin-top:3px;line-height:1.5">In recognition of her lifelong service to children and education</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-text-col">
+      <div class="red-rule mb-20"></div>
+      <div class="eyebrow mb-20">The Founder</div>
+      <div class="founder-pull">She believed every child had a right to education — and spent thirty years proving it.</div>
+
+      <div class="founder-body">
+        <p>Marie Christine de Rochemonteix founded Marica Schools in Hyderabad in 1991, guided by a conviction she never wavered from: that education is not a privilege to be earned, but a right that belongs to every child.</p>
+
+        <p>She built the school from the ground up and led it for three decades — with vision, with discipline, and with a personal interest in every child who passed through its gates. Under her leadership, Marica became known for something larger schools struggle to offer: an education in which each student is genuinely seen, and guided towards the particular genius she believed every one of them carried.</p>
+
+        <div class="founder-blockquote">"The purpose of education is to teach our children to think and develop a capacity to reason out facts."</div>
+
+        <p>Her life's work was recognised with two of the highest honours available to an educator. The Republic of France conferred upon her the <strong>Ordre National du Mérite</strong>, one of the nation's highest civilian distinctions. In India, she received the <strong>Mother Teresa Award</strong> for her service to children and to education.</p>
+
+        <p>Marie Christine de Rochemonteix passed away in 2021, after thirty years of service to the families of Hyderabad. The school she built continues. The conviction on which she built it has not changed.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ VIDEO ══ -->
+<div class="video-section" id="about">
+  <div class="video-inner" style="max-width:var(--max);margin:0 auto">
+    <div>
+      <span class="cap">What kind of school is Marica?</span>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/UVy_FnfnsX8?rel=0&modestbranding=1"
+          title="Marica Schools — Hyderabad"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div>
+      <div class="red-rule mb-20"></div>
+      <div class="eyebrow mb-20">The School</div>
+      <h2 class="t-h2 mb-24">Love, Peace<br>and <em>Harmony.</em></h2>
+      <p class="body mb-16">Marica Schools is a school in Hyderabad with two campuses — Tolichowki (CBSE affiliated) and Chevella (SSC, Telangana State Board). We offer education from Nursery through Class X, with a deliberate commitment to keeping class sizes small so that individual attention is not a promise but a reality.</p>
+      <p class="body mb-32">We are not a large school. We are a serious one. We believe modernity, efficiency, and knowledge matter — and so do discipline, family, and the successful integration of every child into society. Both things are true. Neither cancels the other.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#enquiry" class="btn btn-navy">Enquire for 2025–26</a>
+        <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" class="btn btn-outline">Mandatory Disclosure</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ PHOTO GRID ══ -->
+<div class="photo-section">
+  <div class="w">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px">
+      <div>
+        <div class="red-rule mb-16"></div>
+        <div class="eyebrow mb-12">The School in Pictures</div>
+        <h2 class="t-h2">Life at Marica.</h2>
+      </div>
+      <a href="https://www.facebook.com/MaricaHighSchool/" target="_blank" class="btn-text">View more on Facebook →</a>
+    </div>
+    <div class="photo-editorial">
+      <div class="pe-1">
+        <figure>
+          <span class="cap">Smart Classroom · Tolichowki Campus</span>
+          <div class="photo-box" style="height:260px">[Smart classroom — students in lesson]</div>
+        </figure>
+      </div>
+      <div class="pe-2">
+        <figure>
+          <span class="cap">Science Laboratory</span>
+          <div class="photo-box" style="height:260px">[Science lab — student experiment]</div>
+        </figure>
+      </div>
+      <div class="pe-3">
+        <figure>
+          <span class="cap">Annual Day Performance</span>
+          <div class="photo-box" style="height:260px">[Annual Day cultural programme]</div>
+        </figure>
+      </div>
+      <div class="pe-4">
+        <figure>
+          <span class="cap">Sports & Physical Education</span>
+          <div class="photo-box" style="height:240px">[Sports day / football]</div>
+        </figure>
+      </div>
+      <div class="pe-5">
+        <figure>
+          <span class="cap">Morning Assembly · Community & Values</span>
+          <div class="photo-box" style="height:240px">[Morning assembly photograph]</div>
+        </figure>
+      </div>
+      <div class="pe-6">
+        <figure>
+          <span class="cap">Chevella Campus</span>
+          <div class="photo-box" style="height:240px">[Chevella campus exterior]</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ YOUR CHILD'S YEAR ══ -->
+<div class="year-section" id="year">
+  <div class="year-inner">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">A Child's Year at Marica</div>
+    <h2 class="t-h2">Not a day. A year.<br>Here is what it looks like.</h2>
+    <p class="body mt-16" style="max-width:580px">A year at Marica is structured, full, and alive. From the first day of term to Annual Day and everything in between — this is what your child's year contains.</p>
+
+    <div class="year-grid">
+      <div class="year-month">
+        <div class="ym-month">June — Term Begins</div>
+        <div class="ym-title">Opening Assembly & New Student Welcome</div>
+        <div class="ym-body">The academic year opens with assembly, class introductions, and a welcome for new students. New joiners are introduced carefully — teachers watch the first two weeks closely and act on anything they notice.</div>
+        <div class="ym-tags"><span class="ym-tag">All Classes</span><span class="ym-tag">New Students</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">July</div>
+        <div class="ym-title">Founding Day & Inter-House Competitions</div>
+        <div class="ym-body">We mark the founding of the school and remember Marie Christine de Rochemonteix. Inter-house events begin — quiz, elocution, and general knowledge competitions that continue the morning quiz tradition she started.</div>
+        <div class="ym-tags"><span class="ym-tag">Founding Day</span><span class="ym-tag">Competitions</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">August</div>
+        <div class="ym-title">Independence Day & Essay Writing</div>
+        <div class="ym-body">Independence Day celebrations, flag hoisting, patriotic programme. Essay and poetry writing competitions begin — Marica students have consistently won prizes at inter-school level for written English.</div>
+        <div class="ym-tags"><span class="ym-tag">Independence Day</span><span class="ym-tag">Writing</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">August – September</div>
+        <div class="ym-title">Inter-School Sports Tournaments</div>
+        <div class="ym-body">Football, cricket, athletics, badminton. Our football team has won prizes at inter-school level including 2nd place at the Gurukul tournament (under 12). Children represent the school in uniform with pride.</div>
+        <div class="ym-tags"><span class="ym-tag">Football</span><span class="ym-tag">Cricket</span><span class="ym-tag">Athletics</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">September – October</div>
+        <div class="ym-title">Parent–Teacher Meetings & Term 1 Exams</div>
+        <div class="ym-body">Term 1 assessments. Parent-teacher meetings where teachers speak specifically about each child — not from a template, but from actual observation. Parents leave knowing where their child is and what the plan is.</div>
+        <div class="ym-tags"><span class="ym-tag">Assessments</span><span class="ym-tag">Parent Meetings</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">November</div>
+        <div class="ym-title">Excursions & Educational Visits</div>
+        <div class="ym-body">Field trips that make the classroom real — science museums, historical sites, nature reserves around Hyderabad. The school that taught geography through a wall map takes children out into the geography itself.</div>
+        <div class="ym-tags"><span class="ym-tag">Field Trips</span><span class="ym-tag">Experiential</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">November – December</div>
+        <div class="ym-title">Annual Sports Day</div>
+        <div class="ym-body">The full school gathers. Track events, team sports, house competitions. Every child participates — not just those who are naturally athletic. Sports Day at Marica is about effort and community, not just results.</div>
+        <div class="ym-tags"><span class="ym-tag">All Students</span><span class="ym-tag">Track & Field</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">December</div>
+        <div class="ym-title">Campus France Career Talk</div>
+        <div class="ym-body">Annual session with Campus France Hyderabad for Class IX–X students. French universities, scholarship options, the application process, life as an Indian student in France. A door that very few Hyderabad schools can open.</div>
+        <div class="ym-tags"><span class="ym-tag">Class IX–X</span><span class="ym-tag">Campus France</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">January</div>
+        <div class="ym-title">Annual Day — Cultural Programme</div>
+        <div class="ym-body">Drama, music, dance, spoken word. Students who have been in dramatics and elocution all year perform. Annual Day is when the school shows itself to the community — parents, families, guests. It is taken seriously.</div>
+        <div class="ym-tags"><span class="ym-tag">Drama</span><span class="ym-tag">Music</span><span class="ym-tag">Elocution</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">February</div>
+        <div class="ym-title">Final Assessments & Board Preparation</div>
+        <div class="ym-body">Pre-board exams for Class X. Final term assessments for all other classes. Individual attention intensifies — teachers identify which students need support and provide it before it becomes an emergency.</div>
+        <div class="ym-tags"><span class="ym-tag">Exams</span><span class="ym-tag">Class X</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">February – March</div>
+        <div class="ym-title">CBSE Board Examinations</div>
+        <div class="ym-body">Class X board examinations. Students from Marica go in prepared — three years of building the habit of understanding, not memorising. Results have remained consistent across years.</div>
+        <div class="ym-tags"><span class="ym-tag">Class X</span><span class="ym-tag">CBSE</span></div>
+      </div>
+      <div class="year-month">
+        <div class="ym-month">Throughout the Year</div>
+        <div class="ym-title">Individual Check-ins & Parent App</div>
+        <div class="ym-body">Every parent receives attendance, homework, and school notices in real time through the Navneet TopSchool app. Teachers check in individually with students who need it. You are never left wondering what is happening with your child.</div>
+        <div class="ym-tags"><span class="ym-tag">Navneet App</span><span class="ym-tag">Always Informed</span></div>
+      </div>
+    </div>
+
+    <!-- FOUR PILLARS OF THE YEAR -->
+    <div class="year-pillars">
+      <div class="yp-item">
+        <div class="yp-icon">📱</div>
+        <div class="yp-h">Parent App — Always On</div>
+        <p class="yp-p">Navneet TopSchool puts attendance, homework, notices, and exam schedules on your phone in real time. You are always part of what is happening.</p>
+      </div>
+      <div class="yp-item">
+        <div class="yp-icon">👤</div>
+        <div class="yp-h">25 Students Per Class</div>
+        <p class="yp-p">Small enough for teachers to know each child personally. Not on paper — in practice. Strengths, anxieties, what makes each student light up.</p>
+      </div>
+      <div class="yp-item">
+        <div class="yp-icon">🤝</div>
+        <div class="yp-h">Teachers Who Follow Up</div>
+        <p class="yp-p">When a teacher notices something — academically or socially — they act on it. Parents are informed. No child sinks quietly while the term continues around them.</p>
+      </div>
+      <div class="yp-item">
+        <div class="yp-icon">🏃</div>
+        <div class="yp-h">Sport as Character</div>
+        <p class="yp-p">Physical education is not a filler period. Sports build team spirit, self-confidence, and the ability to lose gracefully and win without arrogance. Both matter.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ BEYOND THE TEXTBOOK ══ -->
+<div class="prog-section" id="academics">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">What Your Child Receives</div>
+    <h2 class="t-h2">Beyond the textbook.<br>Beyond the board exam.</h2>
+    <p class="body mt-16 mb-0" style="max-width:580px">CBSE is the foundation. These are the programmes built on top of it — what makes a Marica education distinct from any other CBSE school in Hyderabad.</p>
+
+    <div class="prog-grid">
+      <div class="prog-card">
+        <div class="pc-n">01</div>
+        <div class="pc-h">CBSE Curriculum</div>
+        <p class="pc-p">Nationally recognised, rigorously delivered. English medium. Science, Mathematics, and Computer labs from Class VI. Focus on understanding over memorisation — students who can explain what they know, not just reproduce it.</p>
+        <div class="pc-tags"><span class="pc-tag">All Classes</span><span class="pc-tag">Lab Work</span><span class="pc-tag">Board Prep</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">02</div>
+        <div class="pc-h">Artificial Intelligence</div>
+        <p class="pc-p">Students work with AI concepts and tools as part of the curriculum — understanding how the technology works, using it responsibly, and building with it. Preparing children for the world they will actually enter, not the one their textbooks were written for.</p>
+        <div class="pc-tags"><span class="pc-tag">AI Curriculum</span><span class="pc-tag">Hands-On</span><span class="pc-tag">Future-Ready</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">03</div>
+        <div class="pc-h">Campus France Pathway</div>
+        <p class="pc-p">Annual session with Campus France Hyderabad — the official French higher education agency. Scholarships, university options, application process. A pathway to French universities that almost no Hyderabad school offers.</p>
+        <div class="pc-tags"><span class="pc-tag">Class IX–X</span><span class="pc-tag">Campus France Partner</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">04</div>
+        <div class="pc-h">Mathematics Laboratory</div>
+        <p class="pc-p">A dedicated Mathematics lab where concepts are explored through hands-on activity, not just abstract instruction. Mathematics becomes something students can see and manipulate — not just calculate.</p>
+        <div class="pc-tags"><span class="pc-tag">Class VI–X</span><span class="pc-tag">Hands-On</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">05</div>
+        <div class="pc-h">Science Laboratory</div>
+        <p class="pc-p">Fully equipped Physics, Chemistry, and Biology labs. Students conduct actual experiments — not demonstrations. The habit of testing an idea rather than accepting it is built here.</p>
+        <div class="pc-tags"><span class="pc-tag">Class VI–X</span><span class="pc-tag">Physics · Chemistry · Biology</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">06</div>
+        <div class="pc-h">STEM & Robotics</div>
+        <p class="pc-p">Building, coding, and problem-solving with real robotics kits and STEM projects. Children learn by making things that work — and by fixing the ones that don't. Engineering thinking begins here, years before an engineering college.</p>
+        <div class="pc-tags"><span class="pc-tag">Robotics</span><span class="pc-tag">Coding</span><span class="pc-tag">Project-Based</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">07</div>
+        <div class="pc-h">Olympiads</div>
+        <p class="pc-p">Students are prepared for and participate in national Olympiads in Mathematics, Science, and English. Competing beyond the school walls builds both academic depth and the confidence of measuring yourself against the best.</p>
+        <div class="pc-tags"><span class="pc-tag">Maths</span><span class="pc-tag">Science</span><span class="pc-tag">English</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">08</div>
+        <div class="pc-h">Dramatics & The Arts</div>
+        <p class="pc-p">Drama, music, art, and craft — taken seriously, not treated as filler. Students who perform on stage at Annual Day have been preparing all year. Inter-school dramatics competitions, creative writing exhibitions.</p>
+        <div class="pc-tags"><span class="pc-tag">All Classes</span><span class="pc-tag">Annual Day</span><span class="pc-tag">Inter-School</span></div>
+      </div>
+      <div class="prog-card">
+        <div class="pc-n">09</div>
+        <div class="pc-h">Career Guidance</div>
+        <p class="pc-p">Stream guidance from Class IX. College and university counselling from Class X. The Campus France talk. And throughout — guest speakers who come and have real conversations with students about what their lives look like.</p>
+        <div class="pc-tags"><span class="pc-tag">Class IX–X</span><span class="pc-tag">Speaker Programme</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ CAN-DO ATTITUDE ══ -->
+<div class="cando-section">
+  <div class="cando-inner" style="max-width:var(--max);margin:0 auto">
+
+    <div>
+      <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+      <div class="eyebrow gold mb-20">A Can-Do Attitude</div>
+      <h2 class="t-h2" style="color:var(--white);margin-bottom:20px">What Marica students<br>develop into.</h2>
+      <p style="font-family:var(--fsans);font-size:16px;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:36px">Marie Christine de Rochemonteix had a can-do attitude about everything she attempted — and she built it into the school's culture. Marica students are not defined by their marks. They are defined by how they carry themselves.</p>
+
+      <div class="cando-achievements">
+        <div class="ca-item">
+          <div class="ca-icon">🏆</div>
+          <div class="ca-text">
+            <h4>Inter-School Poetry Writing</h4>
+            <p>Shanza (Class V) and Alishba (Class VI) were awarded first prize for poetry writing at inter-school level. Marica students have consistently won prizes in writing and dramatics competitions across Hyderabad.</p>
+            <div class="result">🥇 First Prize — Poetry Writing</div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <div class="ca-icon">⚽</div>
+          <div class="ca-text">
+            <h4>Football — Gurukul Tournament</h4>
+            <p>The Marica football team (under 12 category) won second place at the Gurukul inter-school football tournament. Physical education at Marica produces children who compete with effort and carry themselves with grace.</p>
+            <div class="result">🥈 Second Place — Gurukul Football Tournament</div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <div class="ca-icon">🌐</div>
+          <div class="ca-text">
+            <h4>Reliance Foundation Competition</h4>
+            <p>Marica students reached the quarter-finals of the Reliance Foundation competition — competing against schools across India and demonstrating that individual attention produces children who can hold their own at any level.</p>
+            <div class="result">Quarter-Finals — Reliance Foundation</div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <div class="ca-icon">💼</div>
+          <div class="ca-text">
+            <h4>Differently-Abled Alumni</h4>
+            <p>Students with learning differences who studied at Marica — fully integrated into classes alongside their peers — are now software engineers working on technology for the low-vision, government employees, and teachers.</p>
+            <div class="result">Real Outcomes · Real Integration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cando-right">
+      <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+      <div class="eyebrow gold mb-20">What Parents Notice</div>
+      <h3 class="t-h3" style="color:var(--white);margin-bottom:24px">Marica students<br>communicate.</h3>
+      <p style="font-family:var(--fsans);font-size:15px;line-height:1.8;color:rgba(255,255,255,.62);margin-bottom:20px">Parents and teachers who know Marica alumni consistently remark on the same thing: these students communicate. They speak with clarity, listen with attention, and present themselves with ease — on stage, in an interview, in any room they walk into.</p>
+      <p style="font-family:var(--fsans);font-size:15px;line-height:1.8;color:rgba(255,255,255,.62);margin-bottom:32px">This is built deliberately, over years. Karadi Path language learning, library and reading programmes, dramatics, elocution, debate, essay and poetry writing, morning quizzes, inter-school competitions. Communication is not an extra at Marica. It is the core of what the school does — and it has been for 35 years.</p>
+
+      <div class="cando-stat-row">
+        <div class="cando-stat">
+          <div class="cs-num">25</div>
+          <div class="cs-label">Students per class</div>
+        </div>
+        <div class="cando-stat">
+          <div class="cs-num">35<span>+</span></div>
+          <div class="cs-label">Years of graduates</div>
+        </div>
+        <div class="cando-stat">
+          <div class="cs-num">3k<span>+</span></div>
+          <div class="cs-label">Alumni worldwide</div>
+        </div>
+        <div class="cando-stat">
+          <div class="cs-num">10<span>+</span></div>
+          <div class="cs-label">Languages — Founder</div>
+        </div>
+      </div>
+
+      <!-- TWO PHOTOS -->
+      <div class="cando-photo-row">
+        <figure>
+          <span class="cap" style="color:rgba(255,255,255,.4)">Reading & Library Programme</span>
+          <div class="photo-box dark" style="height:180px">[Library / reading session photograph]</div>
+        </figure>
+        <figure>
+          <span class="cap" style="color:rgba(255,255,255,.4)">Elocution & Dramatics</span>
+          <div class="photo-box dark" style="height:180px">[Elocution / drama competition photograph]</div>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ BOARD OF ADVISORS ══ -->
+<div class="advisors-section">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">Board of Advisors</div>
+    <h2 class="t-h2 mb-16">The people guiding<br>Marica's next chapter.</h2>
+    <p class="body" style="max-width:560px">Marica is building a board of advisors — scientists, educators, technologists, and cultural leaders — whose guidance will shape the school's next thirty-five years. Announcements coming.</p>
+
+    <div class="advisors-grid">
+      <div class="advisor-card">
+        <div class="advisor-photo">🔬</div>
+        <div class="advisor-name">Scientist / Researcher</div>
+        <div class="advisor-role">Science & Innovation</div>
+        <p class="advisor-bio">A scientist or researcher who brings rigor, curiosity, and the spirit of real enquiry to how the school thinks about science education.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-photo">🌍</div>
+        <div class="advisor-name">International Educator</div>
+        <div class="advisor-role">Curriculum & Pedagogy</div>
+        <p class="advisor-bio">An educator with international experience who helps Marica ensure its teaching methods remain at the frontier of what we know about how children learn.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-photo">💻</div>
+        <div class="advisor-name">Technology Leader</div>
+        <div class="advisor-role">Technology & Future Skills</div>
+        <p class="advisor-bio">A technology professional who connects the school to what the industry actually needs — so that Marica students arrive in the working world genuinely ready.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-photo">🎭</div>
+        <div class="advisor-name">Cultural Leader</div>
+        <div class="advisor-role">Arts & Community</div>
+        <p class="advisor-bio">Someone who ensures that the arts, culture, and community remain central to what Marica produces — not metrics on a report card, but human beings.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:20px 24px;border:1px solid var(--rule);font-family:var(--fsans);font-size:14px;color:var(--mid)">
+      If you are a professional who would like to contribute to Marica's advisory board, or know someone who should — <a href="mailto:tolichowki@maricaschools.org" style="color:var(--red);font-weight:600">write to us</a>.
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ TESTIMONIALS ══ -->
+<div class="testi-section">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">From the Families</div>
+    <h2 class="t-h2">What parents say<br>about Marica.</h2>
+    <div class="testi-grid mt-48">
+      <div class="testi-card testi-featured">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">I've had two children at Marica — one has graduated, one is in Class VII. What I can tell you after twelve years as a Marica parent is this: the school talks to you. Not at you. The principal's letters are honest. When I've raised concerns, they've been taken seriously. That is rarer than it sounds.</div>
+        <div class="testi-name">[Parent Name]</div>
+        <div class="testi-role">Marica parent for 12 years · Tolichowki Campus</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">My son struggled in his previous school — not because he wasn't bright, but because nobody noticed him. At Marica, his teacher called me after the first week to say she'd identified where he needed support and had a plan.</div>
+        <div class="testi-name">[Parent Name]</div>
+        <div class="testi-role">Parent · Class VI · Tolichowki</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">My daughter started in Nursery. She's in Class V now and still loves coming to school. I don't know any other metric that matters more than that.</div>
+        <div class="testi-name">[Parent Name]</div>
+        <div class="testi-role">Parent since Nursery · Chevella Campus</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">What I notice most about children who come out of Marica is how they speak. They are confident, articulate, and they listen. That's not an accident — that's thirty-five years of taking communication seriously.</div>
+        <div class="testi-name">[Parent / Alumni Name]</div>
+        <div class="testi-role">Parent of Alumni · Tolichowki</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ ALUMNI ══ -->
+<div class="alumni-section">
+  <div class="alumni-inner">
+    <div class="alumni-top">
+      <div>
+        <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+        <div class="eyebrow gold mb-16">Alumni</div>
+        <h2 class="t-h2" style="color:var(--white);margin-bottom:20px">What Marica<br>children become.</h2>
+        <p style="font-family:var(--fsans);font-size:15px;line-height:1.8;color:rgba(255,255,255,.55)">35 years of graduates across every field — in Hyderabad, across India, and around the world. The proof of a school is in the people it produces.</p>
+      </div>
+      <div class="alumni-stats-row">
+        <div class="as-item"><div class="as-num">3k<span>+</span></div><div class="as-label">Alumni worldwide</div></div>
+        <div class="as-item"><div class="as-num">35<span>+</span></div><div class="as-label">Years</div></div>
+        <div class="as-item"><div class="as-num">25</div><div class="as-label">Per class</div></div>
+        <div class="as-item"><div class="as-num">1991</div><div class="as-label">Founded</div></div>
+      </div>
+    </div>
+
+    <div class="alumni-outcomes">
+      <div class="ao-card">
+        <div class="ao-icon">💬</div>
+        <div class="ao-h">Strong Communicators</div>
+        <p class="ao-p">Marica alumni are consistently noted for their communication skills — confident spoken English, the ability to present themselves, and the ease of putting their hand up in a room. This comes from 35 years of treating communication as central, not supplementary.</p>
+        <div class="ao-result">The most remarked-on quality of Marica alumni</div>
+      </div>
+      <div class="ao-card">
+        <div class="ao-icon">🌐</div>
+        <div class="ao-h">Global Pathways</div>
+        <p class="ao-p">Through the Campus France partnership, Marica students have access to guided pathways to French universities — affordable, world-class, and genuinely achievable. France, then Europe, then the world.</p>
+        <div class="ao-result">Campus France Partner · Annual Talk · Class IX–X</div>
+      </div>
+      <div class="ao-card">
+        <div class="ao-icon">🧑‍💻</div>
+        <div class="ao-h">Technology & Public Service</div>
+        <p class="ao-p">Marica alumni include students with learning differences who studied fully alongside their peers — and are now software engineers, government employees, and teachers. Inclusion works. These outcomes prove it.</p>
+        <div class="ao-result">Real integration · Real outcomes</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ ADMISSIONS PROCESS ══ -->
+<div class="admissions-section">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">How Admissions Work</div>
+    <h2 class="t-h2">Simple. Clear.<br><em>No surprises.</em></h2>
+    <p class="body mt-16" style="max-width:560px">Our process is designed to feel like a conversation — not an examination. For the family and for the child.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-n">01</div>
+        <div class="step-h">Enquire</div>
+        <p class="step-p">Fill in the form below or call us on +91 9121460640. We respond within one working day — always. No automated replies.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-n">02</div>
+        <div class="step-h">Visit</div>
+        <p class="step-p">Come to the campus. Meet the principal. See the classrooms. Bring your child. Ask everything you want to know. We are not in a hurry.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-n">03</div>
+        <div class="step-h">Meet</div>
+        <p class="step-p">A brief, informal interaction with your child. Not a test. We want to know them — their interests, how they speak, what matters to them. Not their rank.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-n">04</div>
+        <div class="step-h">Welcome</div>
+        <p class="step-p">Offer, fees, documents, uniform. We guide you through every step. Your child can start within days of the offer. Welcome to Marica.</p>
+      </div>
+    </div>
+    <div style="margin-top:1px;padding:24px 28px;border:1px solid var(--rule);border-top:none;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:var(--white)">
+      <div>
+        <div style="font-family:var(--fserif);font-size:17px;color:var(--navy);margin-bottom:4px">Mid-year or lateral entry? We handle those too.</div>
+        <div style="font-family:var(--fsans);font-size:14px;color:var(--mid)">All classes · Nursery to Class X · Subject to availability · Personal transition plan for every student</div>
+      </div>
+      <a href="#enquiry" class="btn btn-red">Enquire Now →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FAQ ══ -->
+<div class="faq-section" id="faq">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">Frequently Asked Questions</div>
+    <h2 class="t-h2">Every question<br>parents ask.<br><em>Answered honestly.</em></h2>
+    <div class="faq-cols mt-48">
+      <div class="faq-col">
+        <div class="faq-col-head">Admissions & Process</div>
+        <div class="faq-item">
+          <div class="faq-q">Is there an entrance exam?<span class="faq-icon">+</span></div>
+          <div class="faq-a">For Nursery through Class V, there is no entrance exam. For Classes VI and above, we conduct a brief, informal interaction — not to test or exclude, but to understand your child so we can serve them well from Day 1.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can we join mid-year?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes, subject to seat availability. We accept mid-year admissions for all classes. Every mid-year student receives a personal transition plan. Teachers monitor the first four weeks closely.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">My child studied abroad or in a different board. Can they join?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. We have experience supporting transitions from ICSE, IGCSE, IB, and international curricula. Our academic coordinator assesses where the student actually is and builds a plan to close any gaps, at a pace that works for the child.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What documents are required?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Birth certificate, previous school report card (2 years for Class II+), Transfer Certificate (Class II+), Aadhar cards for parent and child, 6 passport-size photographs, and address proof. We will confirm the full list after your campus visit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are scholarships available?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. The Marica Foundation offers sponsored seats for deserving students — full or partial support based on financial need and potential. Marie Christine believed every child had a right to education. Applications are treated with complete confidentiality. Please speak to us directly.</div>
+        </div>
+        <div class="faq-col-head" style="border-top:1px solid var(--rule)">Fees & Logistics</div>
+        <div class="faq-item">
+          <div class="faq-q">What are the fees?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Fee structure is shared during your campus visit or on direct request. Fees vary by stage — Pre-Primary, Primary (I–V), and Secondary (VI–X). There are no hidden charges. Fees are payable monthly in advance before the 5th of each month.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is transport available?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. Transport is available from key areas around Hyderabad. Please contact us directly for current routes and availability: +91 9121460640.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What are the school timings?<span class="faq-icon">+</span></div>
+          <div class="faq-a">School runs Monday to Friday, 8:00 AM to 4:30 PM. Office hours for fee payment and enquiries are daily from the 1st to the 10th of each month, 9:00 AM to 2:00 PM.</div>
+        </div>
+        <div class="faq-col-head" style="border-top:1px solid var(--rule)">After Marica</div>
+        <div class="faq-item">
+          <div class="faq-q">Where do Marica students typically go after Class X?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Across engineering, medicine, law, business, arts, and sciences — in Hyderabad, across India, and some abroad through the French university pathway. Marica alumni are particularly known for their communication skills and ability to carry themselves confidently in any environment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does Marica go up to Class XII?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Currently up to Class X. Our career counselling programme — which begins in Class IX — prepares students thoroughly for the transition to higher secondary. We maintain relationships with several institutions in Hyderabad and can provide guidance and recommendations.</div>
+        </div>
+      </div>
+
+      <div class="faq-col">
+        <div class="faq-col-head">Academics & Teaching</div>
+        <div class="faq-item">
+          <div class="faq-q">What is the student-teacher ratio?<span class="faq-icon">+</span></div>
+          <div class="faq-a">25 students per class. This is maintained deliberately. Individual attention is not a promise — it is a structural reality. Teachers know every student not just by name but by character, strength, and what they need.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens if my child is struggling?<span class="faq-icon">+</span></div>
+          <div class="faq-a">We identify it early through observation and assessment. Remedial support is available in small groups or one-on-one. Parents are informed before problems become crises — not after. Additional learning support is available for students who need it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What makes Marica's approach to communication different?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Communication is central — not supplementary. Library sessions, reading skills development, elocution, dramatics, essay and poetry writing competitions, morning quiz sessions, inter-school events. Marica alumni are consistently noted for their strong spoken English and the confidence with which they present themselves. This is built over years, not weeks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is homework managed?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Homework is purposeful — designed to reinforce what was covered in class, not to fill time. Volume increases appropriately with class level. Pre-Primary has minimal homework. Class IX–X has structured preparation. All homework and notices are communicated through the Navneet TopSchool parent app.</div>
+        </div>
+        <div class="faq-col-head" style="border-top:1px solid var(--rule)">Wellbeing & Community</div>
+        <div class="faq-item">
+          <div class="faq-q">How does the school handle bullying?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Directly and quickly. The class teacher is the first point of contact. The coordinator escalates if needed. Parents are always informed. The culture at Marica — built on dignity as a founding value since 1991 — means incidents are less common than in larger schools, but when they happen, they are addressed without delay.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How can I raise a concern with the school?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Call us on +91 9121460640, email tolichowki@maricaschools.org, or speak directly to the class teacher. Every concern is acknowledged within 24 hours, investigated, responded to, and followed up. A parent who raises a concern is a parent who still believes the school can do better. We take that seriously.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often will I hear from the school?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Daily via the Navneet TopSchool parent app — attendance, homework, notices, exam schedules. Monthly via the principal's letter. Each term via report cards and parent-teacher meetings. Immediately if anything significant happens involving your child. You are never left in the dark.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is the campus safe?<span class="faq-icon">+</span></div>
+          <div class="faq-a">CCTV covers all campus areas. Entry and exit are controlled. Dismissal is supervised — every child is accounted for before leaving the gate. Transport is managed and supervised. Physical safety is treated as non-negotiable, not as a feature.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the Mandatory Disclosure?<span class="faq-icon">+</span></div>
+          <div class="faq-a">CBSE requires all affiliated schools to publish key information publicly — including staff details, infrastructure, results, and compliance data. Marica's Mandatory Disclosure is published in full at <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" style="color:var(--red);font-weight:600">maricaschools.org/mandatory-public-disclosure</a>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ CAMPUSES ══ -->
+<div class="campuses-section">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">Our Campuses</div>
+    <h2 class="t-h2">Two campuses.<br><em>Same Marica.</em></h2>
+    <p class="body mt-16" style="max-width:560px">Tolichowki, our main campus, is CBSE affiliated. Chevella follows the SSC (Telangana State Board) curriculum. Both deliver the same values, the same individual attention, and the same Marica spirit.</p>
+    <div class="campus-grid">
+      <div class="campus-card">
+        <figure>
+          <span class="cap" style="padding:20px 24px 0;display:flex">Main Campus — Tolichowki, Hyderabad</span>
+          <div class="photo-box" style="height:220px;margin:0 0 0 0">[Tolichowki campus photograph]</div>
+        </figure>
+        <div class="campus-body">
+          <div class="campus-name">Tolichowki Campus</div>
+          <div class="campus-row"><span class="campus-row-icon">📍</span><span>9-4-77/3/29 to 34, Nizam Colony, Tolichowki, Hyderabad 500008</span></div>
+          <div class="campus-row"><span class="campus-row-icon">📞</span><a href="tel:+919121460640" style="color:var(--red);font-weight:600">+91 9121460640</a> &nbsp;/&nbsp; <a href="tel:+918897727458" style="color:var(--red);font-weight:600">+91 88977 27458</a></div>
+          <div class="campus-row"><span class="campus-row-icon">✉️</span><a href="mailto:tolichowki@maricaschools.org" style="color:var(--red)">tolichowki@maricaschools.org</a></div>
+          <div class="campus-row"><span class="campus-row-icon">🕐</span><span>Monday – Friday · 8:00 AM – 4:30 PM</span></div>
+          <div class="campus-row"><span class="campus-row-icon">📋</span><span>CBSE Affiliation No. 3630059</span></div>
+          <div class="campus-actions">
+            <a href="#enquiry" class="btn btn-navy" style="padding:10px 20px;font-size:13px">Enquire</a>
+            <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" class="btn btn-outline" style="padding:10px 18px;font-size:13px">Mandatory Disclosure</a>
+          </div>
+        </div>
+        <div class="campus-map">[Google Maps embed — Nizam Colony, Tolichowki]</div>
+      </div>
+
+      <div class="campus-card">
+        <figure>
+          <span class="cap" style="padding:20px 24px 0;display:flex">Branch Campus — Kesaram, Chevella</span>
+          <div class="photo-box" style="height:220px;background:#C8D0DC">[Chevella campus photograph]</div>
+        </figure>
+        <div class="campus-body">
+          <div class="campus-name">Chevella Campus</div>
+          <div class="campus-row"><span class="campus-row-icon">📍</span><span>1-45/7/8/7, Kesaram, Chevella, Ranga Reddy District, Telangana 501503</span></div>
+          <div class="campus-row"><span class="campus-row-icon">📞</span><a href="tel:+919912737288" style="color:var(--red);font-weight:600">+91 99127 37288</a></div>
+          <div class="campus-row"><span class="campus-row-icon">✉️</span><a href="mailto:chevella@maricaschools.org" style="color:var(--red)">chevella@maricaschools.org</a></div>
+          <div class="campus-row"><span class="campus-row-icon">🕐</span><span>Monday – Friday · 8:00 AM – 4:30 PM</span></div>
+          <div class="campus-row"><span class="campus-row-icon">📋</span><span>SSC · Telangana State Board</span></div>
+          <div class="campus-actions">
+            <a href="#enquiry" class="btn btn-navy" style="padding:10px 20px;font-size:13px">Enquire</a>
+          </div>
+        </div>
+        <div class="campus-map">[Google Maps embed — Kesaram, Chevella]</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ ENQUIRY ══ -->
+<div class="enquiry-section" id="enquiry">
+  <div class="enquiry-inner" style="max-width:var(--max);margin:0 auto">
+    <div class="eq-text">
+      <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+      <h2>Ready to find<br>out if Marica<br>is right for<br><em>your child?</em></h2>
+      <p>The only way to know is to come in. Fill in the form and we will call you within one working day.</p>
+      <div class="eq-contact">
+        <div class="eq-contact-item">📞 <a href="tel:+919121460640">+91 9121460640</a></div>
+        <div class="eq-contact-item">📞 <a href="tel:+918897727458">+91 88977 27458</a></div>
+        <div class="eq-contact-item">✉️ <a href="mailto:tolichowki@maricaschools.org">tolichowki@maricaschools.org</a></div>
+        <div class="eq-contact-item">📍 Nizam Colony, Tolichowki, Hyderabad 500008</div>
+        <div class="eq-contact-item">🕐 Mon–Fri · 8:00 AM – 4:30 PM</div>
+      </div>
+      <div style="margin-top:32px;padding:20px 24px;border:1px solid rgba(255,255,255,.15);font-family:var(--fsans);font-size:14px;color:rgba(255,255,255,.5)">
+        CBSE Affiliation No. 3630059 · <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" style="color:var(--gold)">Mandatory Disclosure →</a>
+      </div>
+    </div>
+    <div class="eq-form">
+      <div class="eq-form-head">Start your enquiry</div>
+      <div class="eq-form-sub">We respond within one working day.</div>
+      <div class="ff-row">
+        <div class="ff"><label>Parent Name *</label><input type="text" placeholder="Your full name"></div>
+        <div class="ff"><label>Phone *</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="ff-row">
+        <div class="ff"><label>Child's Name</label><input type="text" placeholder="First name"></div>
+        <div class="ff"><label>Age / Class</label><input type="text" placeholder="e.g. Age 8 or Class III"></div>
+      </div>
+      <div class="ff">
+        <label>Preferred Campus</label>
+        <select>
+          <option value="">Select campus</option>
+          <option>Tolichowki — Main Campus (CBSE)</option>
+          <option>Chevella — Branch Campus (SSC)</option>
+          <option>No preference</option>
+        </select>
+      </div>
+      <div class="ff">
+        <label>When are you looking to join?</label>
+        <select>
+          <option>June 2025 — New academic year</option>
+          <option>Mid-year — as soon as possible</option>
+          <option>Next academic year (2026–27)</option>
+          <option>Still exploring</option>
+        </select>
+      </div>
+      <div class="ff">
+        <label>Any specific circumstances?</label>
+        <textarea placeholder="Returning from abroad, switching boards, scholarship query, special requirements…"></textarea>
+      </div>
+      <a href="#" class="btn btn-red" style="width:100%;justify-content:center;padding:14px;font-size:14px;letter-spacing:.04em">Submit Enquiry →</a>
+      <p class="form-privacy mt-12">🔒 Your details go only to our admissions team and are never shared</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  <div class="footer-inner">
+    <p>© 2025 Marica Schools, Hyderabad · CBSE Affiliation No. 3630059 · Tolichowki & Chevella · <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" style="color:rgba(255,255,255,.5)">Mandatory Disclosure</a></p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/MaricaHighSchool/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/marica.high.school" target="_blank">Instagram</a>
+      <a href="mailto:tolichowki@maricaschools.org">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ STICKY ══ -->
+<div class="sticky-bar">
+  <div class="sticky-text">
+    <p>Marica Schools · Admissions 2025–26</p>
+    <span>Nursery to Class X · Tolichowki & Chevella · +91 9121460640</span>
+  </div>
+  <div class="sticky-btns">
+    <a href="tel:+919121460640" class="btn btn-outline" style="font-size:13px;padding:10px 18px">📞 Call</a>
+    <a href="#enquiry" class="btn btn-red" style="font-size:13px;padding:10px 22px">Enquire →</a>
+  </div>
+</div>
+
+<!-- FAQ ACCORDION -->
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni — Marica Schools Hyderabad · Where Marica Students Go</title>
+<meta name="description" content="35 years of Marica Schools alumni — engineers, doctors, teachers, entrepreneurs, public servants — in Hyderabad, across India, and around the world.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── TOKENS ─── */
+:root {
+  --navy:  #0D1F3C;
+  --red:   #C8001E;
+  --gold:  #B8933A;
+  --white: #FFFFFF;
+  --paper: #FAFAF8;
+  --ink:   #1C2B3A;
+  --mid:   #4A5568;
+  --rule:  #D8D8D4;
+  --lt:    #EDEDEA;
+  --fserif: Georgia, 'Times New Roman', serif;
+  --fsans:  'Inter', -apple-system, sans-serif;
+  --max:   1120px;
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: var(--fsans); color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; padding-bottom: 80px; overflow-x: hidden; max-width: 100vw; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+iframe, video, svg { max-width: 100%; }
+
+/* ─── LAYOUT ─── */
+.w { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+
+/* ─── TYPE ─── */
+.eyebrow { font-family: var(--fsans); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+.eyebrow.gold { color: var(--gold); }
+h1 { font-family: var(--fserif); font-size: clamp(48px, 6.5vw, 96px); font-weight: 400; line-height: 1.0; letter-spacing: -.025em; color: var(--navy); }
+h1 em { font-style: italic; }
+h2, .t-h2 { font-family: var(--fserif); font-size: clamp(30px, 3.8vw, 54px); font-weight: 400; line-height: 1.08; letter-spacing: -.02em; color: var(--navy); }
+h2 em, .t-h2 em { font-style: italic; }
+h3, .t-h3 { font-family: var(--fserif); font-size: clamp(22px, 2.5vw, 32px); font-weight: 400; color: var(--navy); line-height: 1.2; }
+.body-lg { font-size: 18px; line-height: 1.8; color: var(--mid); }
+.body { font-size: 16px; line-height: 1.8; color: var(--mid); }
+.cap { font-family: var(--fsans); font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.cap::before { content: ''; display: block; width: 18px; height: 1.5px; background: var(--red); flex-shrink: 0; }
+.red-rule { width: 48px; height: 3px; background: var(--red); }
+
+/* ─── BUTTONS ─── */
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--fsans); font-size: 13px; font-weight: 600; letter-spacing: .04em; cursor: pointer; transition: all .2s; border: none; }
+.btn-navy { background: var(--navy); color: var(--white); padding: 13px 28px; }
+.btn-navy:hover { background: #162d56; transform: translateY(-1px); }
+.btn-red { background: var(--red); color: var(--white); padding: 13px 28px; }
+.btn-red:hover { background: #a80018; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); padding: 12px 26px; }
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.45); padding: 12px 26px; }
+.btn-outline-white:hover { border-color: white; background: rgba(255,255,255,.1); }
+
+/* ─── SPACING ─── */
+.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-20{margin-top:20px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}.mt-40{margin-top:40px}.mt-48{margin-top:48px}
+.mb-8{margin-bottom:8px}.mb-12{margin-bottom:12px}.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-24{margin-bottom:24px}.mb-32{margin-bottom:32px}.mb-40{margin-bottom:40px}.mb-48{margin-bottom:48px}
+
+/* ─── NAV ─── */
+.nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); }
+.nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav-logo { display: flex; align-items: center; gap: 14px; }
+.nav-logo-mark { width: 38px; height: 38px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.nav-logo-name { font-family: var(--fserif); font-size: 17px; font-weight: 700; color: var(--navy); letter-spacing: .02em; }
+.nav-logo-sub { font-family: var(--fsans); font-size: 9.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-top: 1px; }
+.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+.nav-links a { font-family: var(--fsans); font-size: 13px; font-weight: 500; color: var(--mid); transition: color .2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-links .nav-apply { background: var(--red); color: var(--white); padding: 9px 20px; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; }
+.nav-links .nav-apply:hover { background: #a80018; color: var(--white); }
+
+/* ─── HERO ─── */
+.hero { padding: 88px 40px 0; border-bottom: 1px solid var(--rule); }
+.hero-inner { max-width: var(--max); margin: 0 auto; }
+.hero-top { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: end; padding-bottom: 64px; }
+.hero-kicker { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.hero-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+.hero-standfirst { font-family: var(--fserif); font-size: 20px; font-style: italic; line-height: 1.6; color: var(--mid); border-left: 3px solid var(--red); padding-left: 20px; margin-top: 32px; max-width: 480px; }
+.photo-box { background: #C8D0DC; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #8A9AB0; font-family: var(--fsans); font-size: 12px; font-weight: 500; text-align: center; padding: 12px; position: relative; }
+.photo-box.dark { background: #1a3154; color: rgba(255,255,255,.25); }
+.trust-strip { border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(4, 1fr); }
+.trust-item { padding: 22px 20px; text-align: center; border-right: 1px solid var(--rule); }
+.trust-item:last-child { border-right: none; }
+.ti-num { font-family: var(--fserif); font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; }
+.ti-label { font-family: var(--fsans); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--mid); margin-top: 4px; }
+
+/* ─── FIELDS GRID ─── */
+.fields-section { padding: 88px 40px; }
+.fields-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.field-card { padding: 36px 30px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background .2s; }
+.field-card:nth-child(3n) { border-right: none; }
+.field-card:nth-child(n+4) { border-bottom: none; }
+.field-card:hover { background: var(--paper); }
+.field-icon { font-size: 30px; margin-bottom: 16px; }
+.field-h { font-family: var(--fserif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.field-p { font-family: var(--fsans); font-size: 14px; line-height: 1.75; color: var(--mid); }
+
+/* ─── MARK SECTION (navy) ─── */
+.mark-section { padding: 88px 40px; background: var(--navy); }
+.mark-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.mark-traits { display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,.12); margin-top: 8px; }
+.trait { padding: 26px 28px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.trait:last-child { border-bottom: none; }
+.trait-n { font-family: var(--fserif); font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: .08em; margin-bottom: 8px; }
+.trait-h { font-family: var(--fserif); font-size: 19px; color: var(--white); margin-bottom: 6px; }
+.trait-p { font-family: var(--fsans); font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.6); }
+
+/* ─── GENERATIONS ─── */
+.gen-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.gen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.gen-card { padding: 32px 28px; border-right: 1px solid var(--rule); background: var(--white); transition: background .2s; }
+.gen-card:last-child { border-right: none; }
+.gen-card:hover { background: var(--paper); }
+.gen-years { font-family: var(--fserif); font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+.gen-label { font-family: var(--fsans); font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+.gen-p { font-family: var(--fsans); font-size: 13.5px; line-height: 1.7; color: var(--mid); }
+
+/* ─── STORIES ─── */
+.stories-section { padding: 88px 40px; }
+.stories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+.story-card { border: 1px solid var(--rule); }
+.story-photo { height: 240px; }
+.story-body { padding: 28px; }
+.story-year { font-family: var(--fsans); font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.story-year::before { content: ''; display: block; width: 16px; height: 1.5px; background: var(--gold); }
+.story-name { font-family: var(--fserif); font-size: 20px; color: var(--navy); margin-bottom: 4px; }
+.story-role { font-family: var(--fsans); font-size: 13px; color: var(--mid); margin-bottom: 16px; }
+.story-quote { font-family: var(--fserif); font-size: 15px; font-style: italic; line-height: 1.7; color: var(--ink); }
+.stories-note { margin-top: 28px; padding: 24px 28px; border: 1px solid var(--rule); background: var(--paper); display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.stories-note-text { font-family: var(--fsans); font-size: 14px; line-height: 1.6; color: var(--mid); max-width: 620px; }
+.stories-note-text strong { color: var(--navy); }
+
+/* ─── PHOTO GRID ─── */
+.photos-section { padding: 88px 40px; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.photo-editorial { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 48px; }
+.pe-wide { grid-column: span 2; }
+
+/* ─── GIVE BACK ─── */
+.give-section { padding: 88px 40px; }
+.give-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); margin-top: 52px; }
+.give-card { padding: 36px 30px; border-right: 1px solid var(--rule); transition: background .2s; }
+.give-card:last-child { border-right: none; }
+.give-card:hover { background: var(--paper); }
+.give-icon { font-size: 28px; margin-bottom: 16px; }
+.give-h { font-family: var(--fserif); font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.give-p { font-family: var(--fsans); font-size: 14px; line-height: 1.75; color: var(--mid); }
+
+/* ─── FOR PARENTS (red) ─── */
+.parents-section { padding: 80px 40px; background: var(--red); }
+.parents-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: center; }
+.parents-inner h2 { color: var(--white); }
+.parents-inner p { font-family: var(--fsans); font-size: 16px; line-height: 1.8; color: rgba(255,255,255,.8); margin-top: 20px; }
+
+/* ─── REGISTRY (navy) ─── */
+.registry-section { padding: 88px 40px; background: var(--navy); }
+.registry-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 480px; gap: 80px; align-items: start; }
+.registry-text h2 { color: var(--white); }
+.registry-text h2 em { color: var(--gold); }
+.registry-text p { font-family: var(--fsans); font-size: 16px; line-height: 1.8; color: rgba(255,255,255,.65); margin-top: 20px; }
+.registry-form { background: var(--white); padding: 36px; }
+.rf-head { font-family: var(--fserif); font-size: 22px; color: var(--navy); margin-bottom: 6px; }
+.rf-sub { font-family: var(--fsans); font-size: 13px; color: var(--mid); margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+.ff { display: flex; flex-direction: column; gap: 5px; margin-bottom: 13px; }
+.ff label { font-family: var(--fsans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+.ff input, .ff select, .ff textarea { font-family: var(--fsans); font-size: 14px; color: var(--ink); background: var(--white); border: 1px solid var(--rule); padding: 11px 14px; outline: none; transition: border-color .2s; appearance: none; }
+.ff input:focus, .ff select:focus, .ff textarea:focus { border-color: var(--navy); }
+.ff textarea { resize: vertical; min-height: 80px; }
+.ff-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-note { font-family: var(--fsans); font-size: 11.5px; color: var(--mid); text-align: center; margin-top: 12px; }
+
+/* ─── FOOTER ─── */
+.footer { background: #080f1e; padding: 36px 40px; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer p { font-family: var(--fsans); font-size: 12px; color: rgba(255,255,255,.3); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-family: var(--fsans); font-size: 12px; color: rgba(255,255,255,.4); transition: color .2s; }
+.footer-links a:hover { color: rgba(255,255,255,.8); }
+
+/* ─── STICKY ─── */
+.sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--white); border-top: 2px solid var(--navy); padding: 13px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 -4px 20px rgba(0,0,0,.1); }
+.sticky-text p { font-family: var(--fserif); font-size: 15px; font-weight: 700; color: var(--navy); }
+.sticky-text span { font-family: var(--fsans); font-size: 12px; color: var(--mid); }
+.sticky-btns { display: flex; gap: 10px; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width:960px) {
+  .hero-top { grid-template-columns: 1fr; gap: 48px; }
+  .mark-inner { grid-template-columns: 1fr; gap: 48px; }
+  .fields-grid { grid-template-columns: 1fr 1fr; }
+  .field-card:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .field-card:nth-child(even) { border-right: none; }
+  .field-card:nth-child(n+4) { border-bottom: 1px solid var(--rule); }
+  .field-card:nth-last-child(-n+2) { border-bottom: none; }
+  .gen-grid { grid-template-columns: 1fr 1fr; }
+  .gen-card:nth-child(even) { border-right: none; }
+  .gen-card:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+  .stories-grid { grid-template-columns: 1fr; }
+  .photo-editorial { grid-template-columns: 1fr 1fr; }
+  .give-grid { grid-template-columns: 1fr; }
+  .give-card { border-right: none; border-bottom: 1px solid var(--rule); }
+  .give-card:last-child { border-bottom: none; }
+  .parents-inner { grid-template-columns: 1fr; gap: 40px; }
+  .registry-inner { grid-template-columns: 1fr; gap: 48px; }
+  .trust-strip { grid-template-columns: 1fr 1fr; }
+  .trust-item:nth-child(even) { border-right: none; }
+}
+@media (max-width:640px) {
+  .w { padding: 0 20px; }
+  .nav-inner { padding: 0 20px; }
+  .nav-links a:not(.nav-apply) { display: none; }
+  .hero { padding: 56px 20px 0; }
+  .fields-section, .mark-section, .gen-section, .stories-section,
+  .photos-section, .give-section, .parents-section, .registry-section { padding-left: 20px; padding-right: 20px; }
+  .fields-grid { grid-template-columns: 1fr; }
+  .field-card { border-right: none !important; border-bottom: 1px solid var(--rule) !important; }
+  .field-card:last-child { border-bottom: none !important; }
+  .gen-grid { grid-template-columns: 1fr; }
+  .gen-card { border-right: none; border-bottom: 1px solid var(--rule); }
+  .gen-card:last-child { border-bottom: none; }
+  .photo-editorial { grid-template-columns: 1fr; }
+  .pe-wide { grid-column: auto; }
+  .registry-form { padding: 24px; }
+  .ff-row { grid-template-columns: 1fr; }
+  .sticky-bar { padding: 12px 16px; gap: 10px; }
+  .sticky-text span { display: none; }
+  .sticky-text p { font-size: 13px; }
+  .sticky-btns .btn { font-size: 12px; padding: 9px 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="marica-editorial-home.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 26 26" fill="none" width="20" height="20">
+          <path d="M13 3C13 3 18 7 18 13C18 16 16 19 13 21C10 19 8 16 8 13C8 7 13 3 13 3Z" fill="#C8001E"/>
+          <circle cx="13" cy="10" r="2" fill="white"/>
+          <path d="M13 12L13 19" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="nav-logo-name">Marica Schools</div>
+        <div class="nav-logo-sub">Hyderabad · Est. 1991</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="marica-editorial-home.html">Home</a></li>
+      <li><a href="#become">What They Become</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#network">Alumni Network</a></li>
+      <li><a href="#registry" class="nav-apply">Join the Registry</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div>
+        <div class="hero-kicker">
+          <span class="eyebrow">Marica Alumni · Since 1991</span>
+        </div>
+        <h1>The proof of<br>a school is<br><em>its people.</em></h1>
+        <p class="hero-standfirst">
+          For thirty-five years, Marica students have walked out of Tolichowki and gone on to build lives across Hyderabad, across India, and around the world. This page is for them — and for every parent deciding whether Marica is right for their child.
+        </p>
+      </div>
+      <div>
+        <figure>
+          <span class="cap">Marica Alumni · Across the Generations</span>
+          <div class="photo-box" style="aspect-ratio:4/5">[Alumni group photograph — reunion or graduating batch]</div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-item"><div class="ti-num">3k+</div><div class="ti-label">Alumni worldwide</div></div>
+      <div class="trust-item"><div class="ti-num">35+</div><div class="ti-label">Years of graduates</div></div>
+      <div class="trust-item"><div class="ti-num">1991</div><div class="ti-label">First batch enrolled</div></div>
+      <div class="trust-item"><div class="ti-num">25</div><div class="ti-label">Students per class — always</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ WHAT THEY BECOME ══ -->
+<div class="fields-section" id="become">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">What Marica Alumni Become</div>
+    <h2 class="t-h2">Engineers. Doctors. Teachers.<br>Founders. Public servants.<br><em>People of substance.</em></h2>
+    <p class="body mt-16" style="max-width:600px">Thirty-five years of graduates, 25 students at a time. Marica has never been a large school — which means every one of these paths began with a teacher who knew the student personally.</p>
+
+    <div class="fields-grid">
+      <div class="field-card">
+        <div class="field-icon">⚙️</div>
+        <div class="field-h">Engineering & Technology</div>
+        <p class="field-p">Software engineers, developers, and IT professionals — in Hyderabad's technology corridor and abroad. Among them: alumni with learning differences who studied alongside their peers at Marica and now build technology for the low-vision. That is what inclusion produces.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">🩺</div>
+        <div class="field-h">Medicine & Healthcare</div>
+        <p class="field-p">Doctors, dentists, pharmacists, and healthcare professionals serving communities across Telangana and beyond — carrying into their practice the attentiveness they were once shown as students.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">📚</div>
+        <div class="field-h">Education</div>
+        <p class="field-p">Teachers and educators — including some who returned to teach at Marica itself. There is no stronger endorsement of a school than a student who comes back to stand on the other side of the classroom.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">🏛️</div>
+        <div class="field-h">Government & Public Service</div>
+        <p class="field-p">Government employees and public servants across departments — steady, responsible careers built on the discipline and integrity the school has always held as core values.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">💼</div>
+        <div class="field-h">Business & Enterprise</div>
+        <p class="field-p">Entrepreneurs and professionals running businesses in Hyderabad and beyond. The confidence to start something of your own begins with a school that taught you to trust your own thinking.</p>
+      </div>
+      <div class="field-card">
+        <div class="field-icon">🌍</div>
+        <div class="field-h">Around the World</div>
+        <p class="field-p">Marica alumni live and work across the Gulf, Europe, North America, and Asia. Wherever they are, the same report follows them: they communicate well, they carry themselves with ease, and they get on with people.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ THE MARICA MARK ══ -->
+<div class="mark-section">
+  <div class="mark-inner">
+    <div>
+      <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+      <div class="eyebrow gold mb-20">The Marica Mark</div>
+      <h2 class="t-h2" style="color:var(--white)">How you recognise<br>a Marica alum.</h2>
+      <p style="font-family:var(--fsans);font-size:16px;line-height:1.8;color:rgba(255,255,255,.65);margin-top:24px">Ask anyone who has hired, taught, or worked alongside Marica alumni and the same observations come back, generation after generation. These are not accidents. They are the product of a school that was built — deliberately — to produce them.</p>
+      <p style="font-family:var(--fserif);font-size:19px;font-style:italic;line-height:1.65;color:rgba(255,255,255,.85);margin-top:28px;border-left:3px solid var(--gold);padding-left:20px">"Children should be guided rather than forced towards the goals in their minds — so that we may discover the particular touch of genius in each one of them."</p>
+      <p style="font-family:var(--fsans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:14px">Marie Christine de Rochemonteix · Founder</p>
+    </div>
+    <div class="mark-traits">
+      <div class="trait">
+        <div class="trait-n">01</div>
+        <div class="trait-h">They communicate</div>
+        <p class="trait-p">Clarity when they speak, attention when they listen, ease when they present. Built over years — through Karadi Path language learning, dramatics, elocution, debate, and inter-school competition.</p>
+      </div>
+      <div class="trait">
+        <div class="trait-n">02</div>
+        <div class="trait-h">They carry a can-do attitude</div>
+        <p class="trait-p">The founder's defining spirit, passed down through the school's culture: if it is worth doing, find a way. Marica alumni are known for taking on things others hesitate over.</p>
+      </div>
+      <div class="trait">
+        <div class="trait-n">03</div>
+        <div class="trait-h">They work with everyone</div>
+        <p class="trait-p">Marica classrooms have always brought together children of different backgrounds and abilities. Alumni leave knowing how to get on with people unlike themselves — a skill no textbook teaches.</p>
+      </div>
+      <div class="trait">
+        <div class="trait-n">04</div>
+        <div class="trait-h">They were seen — so they see others</div>
+        <p class="trait-p">Students who were known personally by their teachers grow into adults who pay attention to the people around them. It is the quietest thing Marica teaches, and perhaps the most lasting.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ GENERATIONS ══ -->
+<div class="gen-section">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">Thirty-Five Years</div>
+    <h2 class="t-h2">Four generations<br>of Marica.</h2>
+
+    <div class="gen-grid">
+      <div class="gen-card">
+        <div class="gen-years">1991–2000</div>
+        <div class="gen-label">The Founding Years</div>
+        <p class="gen-p">The first batches — students taught by Marie Christine de Rochemonteix herself, in a school being built around them as they studied. Many of these alumni are now senior professionals and parents themselves. Some send their own children to Marica.</p>
+      </div>
+      <div class="gen-card">
+        <div class="gen-years">2000–2010</div>
+        <div class="gen-label">The Growing Years</div>
+        <p class="gen-p">The school grew in strength and reputation. Alumni from this decade entered engineering, medicine, business, and government service across a rapidly changing Hyderabad — and carried the school's name with them into every field.</p>
+      </div>
+      <div class="gen-card">
+        <div class="gen-years">2010–2020</div>
+        <div class="gen-label">The Global Years</div>
+        <p class="gen-p">Marica alumni increasingly went abroad — the Gulf, Europe, North America. The communication skills the school had always cultivated became their calling card in an international world.</p>
+      </div>
+      <div class="gen-card">
+        <div class="gen-years">2020–Today</div>
+        <div class="gen-label">The New Chapter</div>
+        <p class="gen-p">The generation now graduating learns AI, STEM, and robotics alongside the values the school was founded on. They enter a world their predecessors could not have imagined — with the same foundation beneath them.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ STORIES ══ -->
+<div class="stories-section" id="stories">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">Alumni Stories</div>
+    <h2 class="t-h2">Their words,<br>not ours.</h2>
+
+    <div class="stories-grid">
+      <div class="story-card">
+        <div class="story-photo photo-box">[Alumni photograph]</div>
+        <div class="story-body">
+          <div class="story-year">Class of [Year]</div>
+          <div class="story-name">[Alumni Name]</div>
+          <div class="story-role">[Profession] · [City]</div>
+          <p class="story-quote">"[Their story — a teacher who changed something, a moment that stayed, what Marica gave them that they still use.]"</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="story-photo photo-box">[Alumni photograph]</div>
+        <div class="story-body">
+          <div class="story-year">Class of [Year]</div>
+          <div class="story-name">[Alumni Name]</div>
+          <div class="story-role">[Profession] · [City]</div>
+          <p class="story-quote">"[Their story — a teacher who changed something, a moment that stayed, what Marica gave them that they still use.]"</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="story-photo photo-box">[Alumni photograph]</div>
+        <div class="story-body">
+          <div class="story-year">Class of [Year]</div>
+          <div class="story-name">[Alumni Name]</div>
+          <div class="story-role">[Profession] · [City]</div>
+          <p class="story-quote">"[Their story — a teacher who changed something, a moment that stayed, what Marica gave them that they still use.]"</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stories-note">
+      <p class="stories-note-text"><strong>We are collecting these stories now.</strong> If you studied at Marica — whichever decade — we want to hear where life has taken you. Your story could be the reason a parent chooses this school for their child.</p>
+      <a href="#registry" class="btn btn-red">Share Your Story →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ PHOTOS ══ -->
+<div class="photos-section">
+  <div class="w">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div>
+        <div class="red-rule mb-16"></div>
+        <div class="eyebrow mb-12">The Archive</div>
+        <h2 class="t-h2">Then and now.</h2>
+      </div>
+    </div>
+    <div class="photo-editorial">
+      <figure class="pe-wide">
+        <span class="cap">The Early Years · Marie Christine with Students</span>
+        <div class="photo-box" style="height:260px">[Archive photograph — founder with students]</div>
+      </figure>
+      <figure>
+        <span class="cap">Annual Day · 1990s</span>
+        <div class="photo-box" style="height:260px">[Archive photograph]</div>
+      </figure>
+      <figure>
+        <span class="cap">Sports Day · 2000s</span>
+        <div class="photo-box" style="height:260px">[Archive photograph]</div>
+      </figure>
+      <figure>
+        <span class="cap">Alumni Reunion</span>
+        <div class="photo-box" style="height:240px">[Reunion photograph]</div>
+      </figure>
+      <figure class="pe-wide">
+        <span class="cap">The School Today · Tolichowki Campus</span>
+        <div class="photo-box" style="height:240px">[Current campus photograph]</div>
+      </figure>
+      <figure>
+        <span class="cap">The Next Generation</span>
+        <div class="photo-box" style="height:240px">[Current students photograph]</div>
+      </figure>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ GIVE BACK ══ -->
+<div class="give-section" id="network">
+  <div class="w">
+    <div class="red-rule mb-20"></div>
+    <div class="eyebrow mb-16">The Alumni Network</div>
+    <h2 class="t-h2">Come back.<br><em>Give forward.</em></h2>
+    <p class="body mt-16" style="max-width:580px">A school this size runs on its community. If Marica shaped you, here are three ways to shape the students sitting in your old classroom today.</p>
+
+    <div class="give-grid">
+      <div class="give-card">
+        <div class="give-icon">🎤</div>
+        <div class="give-h">Speak to Students</div>
+        <p class="give-p">Come back and tell students what your work actually looks like — engineer, doctor, founder, civil servant. One honest hour from someone who sat in their seats is worth a hundred career brochures.</p>
+      </div>
+      <div class="give-card">
+        <div class="give-icon">🤝</div>
+        <div class="give-h">Mentor a Student</div>
+        <p class="give-p">Guide a Class IX or X student thinking about their next step — stream choices, college, career. You once needed exactly this. Now you can be it for someone else.</p>
+      </div>
+      <div class="give-card">
+        <div class="give-icon">🎓</div>
+        <div class="give-h">Sponsor a Seat</div>
+        <p class="give-p">Marie Christine believed every child had a right to education. The Marica Foundation continues that work — and alumni contributions sponsor seats for children whose families cannot afford fees. Quietly. Confidentially. Exactly as she did it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOR PARENTS ══ -->
+<div class="parents-section">
+  <div class="parents-inner">
+    <div>
+      <div style="width:32px;height:1.5px;background:rgba(255,255,255,.5);margin-bottom:20px"></div>
+      <div class="eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:16px">For Parents Reading This Page</div>
+      <h2 class="t-h2">This is what you are<br>actually choosing.</h2>
+      <p>A school is a promise about who your child will be at twenty-five. Brochures make that promise in words. Alumni are the promise kept. Thirty-five years of Marica graduates — communicating well, working everywhere, carrying themselves with ease — are the most honest answer we can give to the question every parent asks: <em style="color:white">what will this school make of my child?</em></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="marica-editorial-home.html#enquiry" class="btn" style="background:var(--white);color:var(--red);padding:15px 32px;justify-content:center;font-size:14px">Enquire About Admissions →</a>
+      <a href="marica-editorial-home.html" class="btn btn-outline-white" style="justify-content:center;font-size:14px">Visit the Main Page</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ REGISTRY ══ -->
+<div class="registry-section" id="registry">
+  <div class="registry-inner">
+    <div class="registry-text">
+      <div style="width:32px;height:1.5px;background:var(--gold);margin-bottom:20px"></div>
+      <h2>Studied at Marica?<br><em>Register here.</em></h2>
+      <p>We are building the official Marica alumni registry — every batch since 1991. Register to be invited to reunions, speak to students, mentor, or simply stay connected to the school that knew you.</p>
+      <p style="margin-top:16px">Your details stay with the school. Nothing is published without your permission.</p>
+      <div style="margin-top:32px;padding:20px 24px;border:1px solid rgba(255,255,255,.15);font-family:var(--fsans);font-size:14px;color:rgba(255,255,255,.5)">
+        Questions? Write to <a href="mailto:tolichowki@maricaschools.org" style="color:var(--gold)">tolichowki@maricaschools.org</a>
+      </div>
+    </div>
+    <div class="registry-form">
+      <div class="rf-head">Alumni Registry</div>
+      <div class="rf-sub">Takes two minutes. Every batch, every decade.</div>
+      <div class="ff-row">
+        <div class="ff"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
+        <div class="ff"><label>Year of Leaving *</label><input type="text" placeholder="e.g. 2008"></div>
+      </div>
+      <div class="ff-row">
+        <div class="ff"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="ff"><label>Email *</label><input type="email" placeholder="you@example.com"></div>
+      </div>
+      <div class="ff-row">
+        <div class="ff"><label>Current City</label><input type="text" placeholder="e.g. Hyderabad, Dubai, Toronto"></div>
+        <div class="ff"><label>Profession</label><input type="text" placeholder="e.g. Software Engineer"></div>
+      </div>
+      <div class="ff">
+        <label>How would you like to be involved?</label>
+        <select>
+          <option value="">Select (optional)</option>
+          <option>Attend reunions & events</option>
+          <option>Speak to students about my career</option>
+          <option>Mentor a student</option>
+          <option>Contribute to the Marica Foundation</option>
+          <option>Just stay in touch</option>
+        </select>
+      </div>
+      <div class="ff">
+        <label>A memory or message (optional)</label>
+        <textarea placeholder="A teacher who shaped you, a moment you remember, where life has taken you…"></textarea>
+      </div>
+      <a href="#" class="btn btn-red" style="width:100%;justify-content:center;padding:14px;font-size:14px;letter-spacing:.04em">Join the Registry →</a>
+      <p class="form-note">🔒 Your details stay with the school and are never shared</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  <div class="footer-inner">
+    <p>© 2025 Marica Schools, Hyderabad · CBSE Affiliation No. 3630059 (Tolichowki) · <a href="https://maricaschools.org/mandatory-public-disclosure/" target="_blank" style="color:rgba(255,255,255,.5)">Mandatory Disclosure</a></p>
+    <div class="footer-links">
+      <a href="marica-editorial-home.html">Home</a>
+      <a href="https://www.facebook.com/MaricaHighSchool/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/marica.high.school" target="_blank">Instagram</a>
+      <a href="mailto:tolichowki@maricaschools.org">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ STICKY ══ -->
+<div class="sticky-bar">
+  <div class="sticky-text">
+    <p>Marica Alumni · Since 1991</p>
+    <span>3k+ alumni worldwide · Every batch, every decade</span>
+  </div>
+  <div class="sticky-btns">
+    <a href="marica-editorial-home.html#enquiry" class="btn btn-outline" style="font-size:13px;padding:10px 18px">Admissions</a>
+    <a href="#registry" class="btn btn-red" style="font-size:13px;padding:10px 22px">Join the Registry →</a>
+  </div>
+</div>
+
+</body>
+</html>
